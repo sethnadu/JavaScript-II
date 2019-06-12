@@ -12,7 +12,7 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
   // Potential Solution:
 
-  // Higher order function using "cb" as the call back
+  //Higher order function using "cb" as the call back
   function firstItem(arr, cb) {
     return cb(arr[0]);
   }
@@ -20,36 +20,108 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
   // Function invocation 
   firstItem(items, function(first) {
     console.log(first)
-  });
+  }); 
 
-*/
+  */
 
+
+// function getLength(arr, cb) {
+//   // getLength passes the length of the array into the callback.
+// }
 
 function getLength(arr, cb) {
-  // getLength passes the length of the array into the callback.
+  return cb(arr.length); 
 }
+
+getLength(items, function(itemsLength) {
+  console.log(itemsLength);
+});
+
+ 
+
+
+// function last(arr, cb) {
+//   // last passes the last item of the array into the callback.
+// }
 
 function last(arr, cb) {
-  // last passes the last item of the array into the callback.
+  return cb(arr[arr.length-1]);
 }
+
+last(items, function(lastArray) {
+  console.log(lastArray);
+});
+
+
+
+// function sumNums(x, y, cb) {
+//   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  
+// }
 
 function sumNums(x, y, cb) {
-  // sumNums adds two numbers (x, y) and passes the result to the callback.
+  let result = x + y;
+  return cb(result);
 }
 
+let x = items[0];
+let y = items[1];
+
+sumNums(x,y, function(totalSum) {
+  console.log(totalSum);
+});
+
+
+
+
+
+// function multiplyNums(x, y, cb) {
+//   // multiplyNums multiplies two numbers and passes the result to the callback.
+  
+// }
+
 function multiplyNums(x, y, cb) {
-  // multiplyNums multiplies two numbers and passes the result to the callback.
+  let resultMultiply = x * y;
+  return cb(resultMultiply);
 }
+
+multiplyNums(x, y, function(multiply) {
+  console.log(multiply);
+});
+
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
 }
 
+function contains(item, list, cb) {
+  if (list.includes(item)) {
+    return cb(true); 
+  } else {
+    return cb(false);
+  }
+};
+
+let item= "Gum";
+let list = items;
+
+contains(item, list, function(listIncludes) {
+  console.log(listIncludes);
+});
+
+
 /* STRETCH PROBLEM */
 
+// function removeDuplicates(array, cb) {
+//   // removeDuplicates removes all duplicate values from the given array.
+//   // Pass the duplicate free array to the callback function.
+//   // Do not mutate the original array.
+// }
+
 function removeDuplicates(array, cb) {
-  // removeDuplicates removes all duplicate values from the given array.
-  // Pass the duplicate free array to the callback function.
-  // Do not mutate the original array.
+      if ( array[i] !== array[i]) {
+        array
+      }
+      })
 }

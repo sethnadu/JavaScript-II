@@ -1,6 +1,22 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+let hourPay = function(wage) {
+  let hoursWorked = function(hours) {
+    return wage * hours;
+  };
+return hoursWorked;
+};
+
+let TwentyAnHour = hourPay(20);
+let TwentyFiveAnHour = hourPay(40);
+
+console.log(TwentyAnHour(40));
+console.log(TwentyFiveAnHour(40));
+
+
+
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
